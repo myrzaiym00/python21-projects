@@ -1,12 +1,17 @@
 from shop.models import Product, Category
-from abstract.serializers import BaseSerializer
+from shop.views import product_list, product_create, product_detail,product_delete, product_update
 
 cat = Category("phones")
+Category("dyson")
+Category("food")
 
-obj1 = Product("iphone", 234, "...", 3, cat)
-obj2 = Product("lenovo", 34, "...", 5, cat)
-obj3 = Product("samsung", 87, "...", 10, cat)
+Product("iphone", 234, "...", 3, cat)
+Product("lenovo", 34, "...", 5, cat)
+Product("samsung", 87, "...", 10, cat)
 
-res = BaseSerializer().serialize_queryset([obj1, obj2, obj3])
 from pprint import pprint
-pprint(res)
+#pprint(product_create())
+pprint(product_list())
+id_ = input("Введите продукт для обновления: ")
+pprint(product_update(id_))
+pprint(product_list())
