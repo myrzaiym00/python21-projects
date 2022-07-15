@@ -13,6 +13,7 @@ class Category:
 class Product:
     objects = []
     _id = 0
+    colors = ("gold")
 
     def __init__(self, title, price, description, quantity, category):
         self.id = Product._id

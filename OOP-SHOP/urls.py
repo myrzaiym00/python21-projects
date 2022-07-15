@@ -7,6 +7,7 @@ url_patterns = [
     ('product-detail/id', product_detail),
     ('product-update/id', product_update),
     ('product-delete/id', product_delete),
+
     ('category-create/', category_create),
-    ('comment-create', create_comment)
+    ('comment-create', create_comment),
 ]
